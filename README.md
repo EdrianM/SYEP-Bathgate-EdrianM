@@ -1,1 +1,1 @@
-# SYEP-Bathgate_EdrianM
+# SYEP-Bathgate-EdrianM
