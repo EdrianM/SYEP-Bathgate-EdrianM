@@ -1,30 +1,29 @@
-const review = [
-{
-    id:1,
-    name: 'Susan Smith',
-    Job:'web developer',
-    img: '',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores debitis incidunt, eius earum ipsam cupiditate libero? Iste, doloremque nihil?',
-},
-
-{
-    id:2,
-    name: 'Anna Johnson',
-    Job:'web developer',
-    img: '#',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores debitis incidunt, eius earum ipsam cupiditate libero? Iste, doloremque nihil?',
-},
-
-{
-    id:3,
-    name: 'Peter Jones',
-    Job:'web developer',
-    img: '#',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores debitis incidunt, eius earum ipsam cupiditate libero? Iste, doloremque nihil?',
-},
+const reviews = [
+    {
+        id:1,
+        name: 'Eve Abraha',
+        job:'Physics Teacher',
+        img: 'ea.png',
+        text: ' Edrian, you always complete your work on time, ask questions in class and support your classmates. Keep up the good work, you rarely procrastinate and that is one of your strongest assets.',
+    },
+    {
+        id:2,
+        name: 'Alain Latoritue',
+        job:'ELA Teacher',
+        img: 'https://media.licdn.com/dms/image/v2/C4D03AQH1hb_YiDgvkQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662519432541?e=1757548800&v=beta&t=csTq3sDHWWTAMvluGBhVvMtwLDXqglXVEEfG9WXer2g',
+        text: 'You were so much fun to teach and really appreciate the positive energy you bring to the class. Along with that energy, you always showed to me and to your peers how bright you are.',
+        
+    },
+    {
+        id:3,
+        name: 'Peter Jones',
+        job:'web developer',
+        img: 'https://via.placeholder.com/150',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores debitis incidunt, eius earum ipsam cupiditate libero? Iste, doloremque nihil?',
+    },
 ];
 
-//select items
+// select items
 const img = document.getElementById('person-img');
 const author = document.getElementById('author');
 const job = document.getElementById('job');
@@ -35,20 +34,17 @@ const nextBtn = document.querySelector('.next-btn');
 
 let currentItem = 0;
 
+// load initial item
 window.addEventListener('DOMContentLoaded', function(){
-    const item = reviews[currentItem];
-    img.src = item.img;
-    author.textContent=item.name;
-     job.textContent=item.job;
-      info.textContent=item.text;
-})
+    showPerson(currentItem);
+});
 
 function showPerson(person){
     const item = reviews[person];
     img.src = item.img;
-    author.textContent=item.name;
-    job.textContent=item.job;
-    info.textContent=item.text;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
 }
 
 nextBtn.addEventListener('click', function(){
@@ -56,7 +52,7 @@ nextBtn.addEventListener('click', function(){
     if(currentItem > reviews.length - 1) {
         currentItem = 0;
     }
-    showPerson(currentItem)
+    showPerson(currentItem);
 });
 
 prevBtn.addEventListener('click', function(){
