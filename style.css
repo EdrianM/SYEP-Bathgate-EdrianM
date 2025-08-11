@@ -47,7 +47,7 @@ body{
     width: 400px;
     height: auto;
     padding: 30px;
-   border-radius: 50px;
+   border-radius: 5000px;
 }
 
 .section p{
@@ -86,4 +86,8 @@ body{
 .hero-text{
     display: flex;
     flex-direction: column;
+}
+
+html {
+  scroll-padding-top: 70px; /* adjust for your navbar height */
 }
